@@ -1,21 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { WeatherService } from 'src/services/weather.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'module-federation-test';
-  forecast: any = [];
 
-  constructor(private weatherService: WeatherService) {
+  constructor() {
 
   }
-  ngOnInit(): void {
-    this.weatherService.getForecast().subscribe(data => {
-      this.forecast = data;
-    })
-  }
+
 }
