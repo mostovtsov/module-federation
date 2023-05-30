@@ -10,6 +10,8 @@ const initialState = {
     ]
 };
 
+
+
 export function weatherReducer(state = initialState, action: ForecastActions.AddForecast) {
     switch (action.type) {
         case ForecastActions.ADD_FORECAST:
